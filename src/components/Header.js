@@ -42,6 +42,7 @@ const Container = styled.div`
     height: 90px;
     font-family: 'intersemibold';
     font-size: 18px;
+    display: flex;
 `
 
 const Wrapper = styled.div`
