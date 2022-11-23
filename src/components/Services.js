@@ -18,7 +18,7 @@ function Services() {
                         <Left><p>__</p></Left>
                         <Right>
                             <p>We help ambitious business like your generate more profits by building awareness,
-                                 driving web traffic, connecting with customers and growing
+                                 driving web traffic, connecting with customers and growing overall sales
                             </p>
                         </Right>
                     </Description>                   
@@ -77,6 +77,7 @@ const Description = styled.div`
 
 const Left = styled.div`
     margin-right: 30px;
+    margin-top: -10px;
 `
 
 const Right = styled.div`

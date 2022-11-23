@@ -94,6 +94,7 @@ const Description = styled.div`
 
 const Left = styled.div`
     margin-right: 30px;
+    margin-top: -10px;
 `
 
 const Right = styled.div`

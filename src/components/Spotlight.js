@@ -14,10 +14,10 @@ function Spotlight() {
                     <SlantingText text="Hello!" />
                     <Title>We have Design Experience</Title>
                     <Description>
-                        <Left><p>__</p></Left>
-                        <Right>
+                        <DescriptionLeft><p>__</p></DescriptionLeft>
+                        <DescriptionRight>
                             <p>Hi! I'am a UI/UX Designer--- creating bold & brave interface design for companies all across the world</p>
-                        </Right>
+                        </DescriptionRight>
                     </Description>
                     <ButtonContainer>
                         <BgButton>
@@ -25,7 +25,7 @@ function Spotlight() {
                                 <p>Let's Talk</p>
                             </Left>
                             <Right>
-                                <img src={require('../assets/images/send.png')} alt='arrow' />
+                                <img src={require('../assets/images/telegram_outline.svg').default} alt='arrow' />
                             </Right>
                         </BgButton>
                         <Button>
@@ -109,11 +109,12 @@ const Description = styled.div`
     color: #60625d;
 `
 
-const Left = styled.div`
+const DescriptionLeft = styled.div`
     margin-right: 30px;
+    margin-top: -10px;
 `
 
-const Right = styled.div`
+const DescriptionRight = styled.div`
    
 `
 
@@ -147,6 +148,14 @@ const BgButton = styled(Button)`
     background-color: #8873EF;
     color: #fff;
     cursor: pointer;
+`
+
+const Left = styled.div`
+    margin-right: 20px;
+`
+
+const Right = styled.div`
+    
 `
 
 const Bottom = styled.div`
