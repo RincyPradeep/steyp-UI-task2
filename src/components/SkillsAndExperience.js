@@ -2,15 +2,9 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import SkillsList from './SkillsList'
 import SlantingText from './SlantingText'
-import VisualDesign from '../assets/images/visual_icon.svg'
-import WireFrame from '../assets/images/wire_frame.svg'
-import UX from '../assets/images/ux_icon.svg'
-import Prototype from '../assets/images/prototype.svg'
-import ArtDirection from '../assets/images/art_direction.svg'
-import UserResearch from '../assets/images/user_research.svg'
 import ExperienceList from './ExperienceList'
+import Skillset from './Skillset'
 
 
 function SkillsAndExperience() {
@@ -32,19 +26,12 @@ function SkillsAndExperience() {
                 </Top>
                 <Bottom>
                     <SubTitle>Skills</SubTitle>
-                    <LeftUList>
-                        <SkillsList src={VisualDesign} text="Visual design" />
-                        <SkillsList src={WireFrame} text="Wire frame" />
-                        <SkillsList src={UX} text="User Experience Design" />
-                        <SkillsList src={Prototype} text="Prototype" />
-                        <SkillsList src={ArtDirection} text="Art Direction" />
-                        <SkillsList src={UserResearch} text="User Research" />
-                    </LeftUList>
+                    <Skillset />
                 </Bottom>
             </LeftContainer>
             <RightContainer>
+                <SubTitle>Experience</SubTitle>
                 <RightUList>       
-                    <SubTitle>Experience</SubTitle>
                     <ExperienceList year="2019 - Present" designation="Product Designer" company="Amazon Inc" />
                     <ExperienceList year="2014 - 2006" designation="UI/UX Designer" company="Microsoft" />
                     <ExperienceList year="2014 - 2006" designation=" WebUI/UX Designer" company="Google" />
@@ -107,13 +94,6 @@ const Bottom = styled.div`
 
 const SubTitle = styled.h6`
    margin-bottom: 30px;
-`
-
-const LeftUList = styled.ul`
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   width: 100%;
 `
 
 const RightContainer = styled.div`

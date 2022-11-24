@@ -1,14 +1,9 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 
 import styled from 'styled-components'
 
 
-function ServicePage({setActiveMenu}) {
-
-  useEffect(()=>{
-    setActiveMenu("services")
-  },[])
-
+function ServicePage() {
   return (
     <Container>
         <h5>Service Offer Page</h5>
@@ -17,6 +12,7 @@ function ServicePage({setActiveMenu}) {
 }
 
 export default ServicePage
+
 
 const Container = styled.div`
   height: 40vh;

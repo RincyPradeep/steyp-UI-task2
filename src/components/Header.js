@@ -1,36 +1,36 @@
 import React from 'react'
 
-import {Link} from 'react-router-dom';
+import {Link,NavLink} from 'react-router-dom';
 import styled from 'styled-components'
 
 
-function Header({activeMenu}) {    
+function Header() {    
   return (
     <Container>
         <Wrapper>
             <NavLeft>
                 <Heading>
-                    <Link to='#'>
+                    <Link to='/'>
                         <img src={require('../assets/images/casa_logo.svg').default} alt="logo" />
                     </Link>
                 </Heading>
             </NavLeft>
             <NavMiddle>
                 <UList>
-                    <List activeMenu={activeMenu} active="home">
-                        <Link to='/'>Home</Link>
+                    <List >
+                        <NavLink to='/' className={({isActive})=>isActive ? 'active' : undefined}>Home</NavLink>
                     </List>
-                    <List activeMenu={activeMenu} active="services">
-                        <Link to='/services'>Service offer</Link>
+                    <List >
+                        <NavLink to='/services' className={({isActive})=>isActive ? 'active' : undefined}>Service offer</NavLink>
                     </List>
-                    <List activeMenu={activeMenu} active="experience">
-                        <Link to='/experience'>Experience</Link>
+                    <List >
+                        <NavLink to='/experience' className={({isActive})=>isActive ? 'active' : undefined}>Experience</NavLink>
                     </List>
-                    <List activeMenu={activeMenu} active="projects">
-                        <Link to='/projects'>Projects</Link>
+                    <List >
+                        <NavLink to='/projects' className={({isActive})=>isActive ? 'active' : undefined}>Projects</NavLink>
                     </List>
-                    <List activeMenu={activeMenu} active="contact">
-                        <Link to='/Contact'>Contact</Link>
+                    <List >
+                        <NavLink to='/Contact' className={({isActive})=>isActive ? 'active' : undefined}>Contact</NavLink>
                     </List>
                 </UList>
             </NavMiddle>
@@ -94,10 +94,14 @@ const UList = styled.ul`
 const List = styled.li`
     margin-right: 30px;
     padding-bottom: 5px;
-    border-bottom: ${({active,activeMenu})=>active===activeMenu && '2px solid #000'};
-    font-size: ${({active,activeMenu})=>active===activeMenu && '20px'};
     &:last-child{
         margin-right: 0;
+    }
+    a{
+       &.active {
+        font-size: 20px;
+        border-bottom: 2px solid #000;
+      } 
     }
 `
 

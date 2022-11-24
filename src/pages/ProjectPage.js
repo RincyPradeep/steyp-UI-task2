@@ -1,12 +1,7 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 
 
-function Projects({setActiveMenu}) {
-
-  useEffect(()=>{
-    setActiveMenu("projects")
-  },[])
-
+function Projects() {
   return (
     <div>
          Projects

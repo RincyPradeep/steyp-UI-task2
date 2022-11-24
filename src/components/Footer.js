@@ -75,6 +75,7 @@ export default Footer
 
 const Container = styled.div`
     padding-top: 50px;
+    background-color: #f6f8f4;
 `
 
 const Wrapper = styled.div`
@@ -160,7 +161,7 @@ const Bottom = styled.div`
     padding:20px 0;
     margin-top: 50px;
     font-family: intersemibold;
-    border-top: 1px solid #e4e7df;
+    border-top: 1px solid #c3c5c1;
 `
 
 const Left = styled.div`

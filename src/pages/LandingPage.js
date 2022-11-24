@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
@@ -8,12 +8,7 @@ import Spotlight from '../components/Spotlight';
 import Testimonials from '../components/Testimonials';
 
 
-function LandingPage({setActiveMenu}) {
-
-  useEffect(()=>{
-    setActiveMenu("home")
-  },[])
-
+function LandingPage() {
   return (
     <>
       <Spotlight />

@@ -1,12 +1,7 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 
 
-function Contact({setActiveMenu}) {
-
-  useEffect(()=>{
-    setActiveMenu("contact")
-  },[])
-
+function Contact() {
   return (
     <div>
         
