@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components'
 
 
-function Header() {
+function Header({activeMenu}) {    
   return (
     <Container>
         <Wrapper>
@@ -17,17 +17,27 @@ function Header() {
             </NavLeft>
             <NavMiddle>
                 <UList>
-                    <List><Link to='/'>Home</Link></List>
-                    <List><Link to='/services'>Service offer</Link></List>
-                    <List><Link to='/experience'>Experience</Link></List>
-                    <List><Link to='/projects'>Projects</Link></List>
-                    <List><Link to='/contact'>Contact</Link></List>
+                    <List activeMenu={activeMenu} active="home">
+                        <Link to='/'>Home</Link>
+                    </List>
+                    <List activeMenu={activeMenu} active="services">
+                        <Link to='/services'>Service offer</Link>
+                    </List>
+                    <List activeMenu={activeMenu} active="experience">
+                        <Link to='/experience'>Experience</Link>
+                    </List>
+                    <List activeMenu={activeMenu} active="projects">
+                        <Link to='/projects'>Projects</Link>
+                    </List>
+                    <List activeMenu={activeMenu} active="contact">
+                        <Link to='/Contact'>Contact</Link>
+                    </List>
                 </UList>
             </NavMiddle>
             <NavRight>
                 <UList>
-                    <List ><Link to='/signin'>Sign in</Link></List>
-                    <ListButton><Link to='/signup' className='button'>Sign up</Link></ListButton>
+                    <SignIn><Link to='/signin'>Sign in</Link></SignIn>
+                    <SignUp><Link to='/signup' className='button'>Sign up</Link></SignUp>
                 </UList>           
             </NavRight>
         </Wrapper>
@@ -40,7 +50,7 @@ export default Header
 
 const Container = styled.div`
     height: 90px;
-    font-family: 'intersemibold';
+    font-weight:600;
     font-size: 18px;
     display: flex;
 `
@@ -83,11 +93,19 @@ const UList = styled.ul`
 
 const List = styled.li`
     margin-right: 30px;
+    padding-bottom: 5px;
+    border-bottom: ${({active,activeMenu})=>active===activeMenu && '2px solid #000'};
+    font-size: ${({active,activeMenu})=>active===activeMenu && '20px'};
     &:last-child{
         margin-right: 0;
     }
 `
-const ListButton = styled(List)`
+
+const SignIn = styled.li`
+    margin-right: 30px;
+`
+
+const SignUp = styled(List)`
     border: 1px solid black;
     padding: 10px 30px;
     border-radius: 5px;

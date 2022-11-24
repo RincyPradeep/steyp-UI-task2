@@ -1,30 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './App.css';
-import Contact from './pages/Contact';
-import Experience from './pages/Experience';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Contact from './pages/ContactPage';
+import Experience from './pages/ExperiencePage';
 import LandingPage from './pages/LandingPage';
-import Projects from './pages/Projects';
-import Service from './pages/Service';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+import Projects from './pages/ProjectPage';
+import Service from './pages/ServicePage';
+import SignIn from './pages/SignInPage';
+import SignUp from './pages/SignUpPage';
 
 
 function App() {
+
+  const[activeMenu,setActiveMenu] = useState("")
+
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route exact path='/' element={<LandingPage />} />
-          <Route path='experience' element={<Experience />} />
-          <Route path='projects' element={<Projects />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='services' element={<Service />} />
-          <Route path='signin' element={<SignIn />} />
-          <Route path='signup' element={<SignUp />} />
-        </Routes>
+        <Header activeMenu={activeMenu} />
+          <Routes>
+            <Route exact path='/' element={<LandingPage setActiveMenu={setActiveMenu} />} />
+            <Route path='/experience' element={<Experience setActiveMenu={setActiveMenu}/>} />
+            <Route path='/projects' element={<Projects setActiveMenu={setActiveMenu}/>} />
+            <Route path='/contact' element={<Contact setActiveMenu={setActiveMenu}/>} />
+            <Route path='/services' element={<Service setActiveMenu={setActiveMenu}/>} />
+            <Route path='/signin' element={<SignIn />} />
+            <Route path='/signup' element={<SignUp />} />
+          </Routes>
+          <Footer />
       </Router>
     </div>
   );
