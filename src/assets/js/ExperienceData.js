@@ -1,4 +1,4 @@
-export const projects_data =[
+export const experience_data =[
     {
         id: 1,
         year: "2019-present",

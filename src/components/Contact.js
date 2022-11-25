@@ -6,19 +6,23 @@ import ContactList from './ContactList'
 import SlantingText from './SlantingText'
 import MessageBox from '../assets/images/message_box_with_bg.svg'
 import Location from '../assets/images/location_with_bg.svg'
+import ContactPartOne from './ContactPartOne'
+import ContactPartTwo from './ContactPartTwo'
 
 
 function Contact() {
   return (
     <Container>
         <Wrapper>
-            <LeftContainer>
+            <ContactPartOne />
+            <ContactPartTwo />
+            {/* <LeftContainer>
                 <SlantingText text="Contact" />
                 <Title>Let's Discuss Your Project</Title>
                 <ContactList img={MessageBox} text="Email" address="client.tnim@gmail.com" />
                 <ContactList img={Location} text="Location" address="Washington Ave.Manchester, Kentucky, 39495" />
-            </LeftContainer>
-            <RightContainer>
+            </LeftContainer> */}
+            {/* <RightContainer>
                 <Content>
                     <Left>
                         <img src={require("../assets/images/hand_color.svg").default} alt="hi" />
@@ -28,7 +32,7 @@ function Contact() {
                         <img src={require("../assets/images/service_arrow.svg").default} alt="arrow" />
                     </Right>
                 </Content>
-            </RightContainer>
+            </RightContainer> */}
         </Wrapper>
         <hr/>
     </Container>
@@ -58,50 +62,50 @@ const Wrapper = styled.div`
     align-items: center;
 `
 
-const LeftContainer = styled.div`
-    width: 40%;
-`
+// const LeftContainer = styled.div`
+//     width: 40%;
+// `
 
-const Title = styled.h2`
-    line-height: 1.6;
-    margin-bottom: 30px;
-`
+// const Title = styled.h2`
+//     line-height: 1.6;
+//     margin-bottom: 30px;
+// `
 
-const RightContainer = styled.div`
-    width: 600px;
-    height: 600px;
-    border: 1px solid #60625d;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+// const RightContainer = styled.div`
+//     width: 600px;
+//     height: 600px;
+//     border: 1px solid #60625d;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// `
 
-const Content = styled.div`
-    width:60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 2px solid #60625d;
-    padding-bottom: 10px;
-`
+// const Content = styled.div`
+//     width:60%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-end;
+//     border-bottom: 2px solid #60625d;
+//     padding-bottom: 10px;
+// `
 
-const Left = styled.div`
-    display:flex;
-    align-items: center;
-    img{
-        width:50px;
-        margin-right: 20px;
-    }
-    span{
-        font-size: 16px;
-        font-family: intersemibold;
-    }
-`
+// const Left = styled.div`
+//     display:flex;
+//     align-items: center;
+//     img{
+//         width:50px;
+//         margin-right: 20px;
+//     }
+//     span{
+//         font-size: 16px;
+//         font-family: intersemibold;
+//     }
+// `
 
-const Right = styled.div`
-    img{
-        width:130px;
-    }
-`
+// const Right = styled.div`
+//     img{
+//         width:130px;
+//     }
+// `
 
