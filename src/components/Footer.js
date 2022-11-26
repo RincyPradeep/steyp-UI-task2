@@ -81,17 +81,27 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: 90%;
     margin:0 auto;
+    @media all and (max-width:640px){
+        li{
+            font-size:14px;
+        }
+    }
 `
 
 const Top = styled.div`
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap
 `
 
 const ColumnOne = styled.div`
    width: 30%;
    img{
     width: 100px;
+   }
+   @media all and (max-width:980px){
+    width: 100%;
+    margin-bottom: 30px;
    }
 `
 
@@ -103,12 +113,21 @@ const Description = styled.p`
 
 const ColumnTwo = styled.div`
    width: 20%;
+   @media all and (max-width:980px){
+    width: 30%;
+   }
+   @media all and (max-width:640px){
+        width: 25%;
+    }
 `
 
 const Title = styled.p`
    font-family: interbold;
    font-size: 22px;
    margin-bottom: 20px;
+   @media all and (max-width:640px){
+        font-size:18px;
+    }
 `
 
 const UList = styled.ul`
@@ -121,10 +140,22 @@ const List = styled.li`
 
 const ColumnThree = styled.div`
     width: 20%;
+    @media all and (max-width:980px){
+        width: 30%;
+    }
+    @media all and (max-width:640px){
+        width: 25%;
+    }
 `
 
 const ColumnFour = styled.div`
     width: 20%;
+    @media all and (max-width:980px){
+        width: 30%;
+    }
+    @media all and (max-width:640px){
+        width: 40%;
+    }
 `
 
 const Contact = styled.div`
@@ -133,6 +164,9 @@ const Contact = styled.div`
 
 const Email = styled.p`
     margin-top: 15px;
+    @media all and (max-width:640px){
+        font-size: 14px;
+    }
 `
 
 const Phone = styled.div`
@@ -141,6 +175,9 @@ const Phone = styled.div`
     align-items: center;
     img{
         margin-right: 10px;
+    }
+    @media all and (max-width:640px){
+        font-size: 14px;
     }
 `
 
@@ -151,6 +188,11 @@ const SocialMedia = styled.div`
     img{
         width:25px;
         margin-right: 30px;
+    }
+    @media all and (max-width:640px){
+        img{
+            width: 18px;
+        }
     }
 `
 

@@ -47,6 +47,17 @@ const ListMiddle = styled.div`
         line-height: 1.8;
         margin-bottom: 20px;
     }
+    @media all and (max-width:1280px){
+        width: 50%;
+        h6{
+            font-size: 24px;
+        }
+    }
+    @media all and (max-width:980px){
+        h6{
+            font-size: 20px;
+        }
+    }
 
 `
 

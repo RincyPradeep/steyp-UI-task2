@@ -30,6 +30,14 @@ const RightContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media all and (max-width:1280px){
+        width: 400px;
+        height: 400px;
+    }
+    @media all and (max-width:640px){
+        width:300px;
+        height:300px;
+    }
 `
 
 const Content = styled.div`
@@ -39,6 +47,9 @@ const Content = styled.div`
     align-items: flex-end;
     border-bottom: 2px solid #60625d;
     padding-bottom: 10px;
+    @media all and (max-width:1280px){
+        width: 80%;
+    }
 `
 
 const Left = styled.div`
@@ -57,5 +68,15 @@ const Left = styled.div`
 const Right = styled.div`
     img{
         width:130px;
+    }
+    @media all and (max-width:1280px){
+        img{
+            width: 100px;
+        }
+    }
+    @media all and (max-width:640px){
+        img{
+            width: 60px;
+        }
     }
 `

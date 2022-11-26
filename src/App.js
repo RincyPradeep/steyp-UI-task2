@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -15,19 +15,16 @@ import SignUp from './pages/SignUpPage';
 
 
 function App() {
-
-  const[activeMenu,setActiveMenu] = useState("")
-
   return (
     <div className="App">
       <Router>
-        <Header activeMenu={activeMenu} />
+        <Header/>
           <Routes>
-            <Route exact path='/' element={<LandingPage setActiveMenu={setActiveMenu} />} />
-            <Route path='/experience' element={<Experience setActiveMenu={setActiveMenu}/>} />
-            <Route path='/projects' element={<Projects setActiveMenu={setActiveMenu}/>} />
-            <Route path='/contact' element={<Contact setActiveMenu={setActiveMenu}/>} />
-            <Route path='/services' element={<Service setActiveMenu={setActiveMenu}/>} />
+            <Route exact path='/' element={<LandingPage />} />
+            <Route path='/experience' element={<Experience />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/services' element={<Service />} />
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
           </Routes>

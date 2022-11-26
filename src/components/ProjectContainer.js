@@ -53,6 +53,7 @@ const ColumnOne = styled.div`
 const Title = styled.div`
     h2{
         color: #000;
+        font-size: 55px;
     }
     span{
         color: #FCDA69;

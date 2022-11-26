@@ -55,6 +55,9 @@ const Wrapper = styled.div`
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width:980px){
+        flex-direction: column;
+    }
 `
 
 const LeftContainer = styled.div`
@@ -62,6 +65,9 @@ const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media all and (max-width:980px){
+        width: 100%;
+    }
 `
 
 const Top = styled.div`
@@ -69,7 +75,9 @@ const Top = styled.div`
 `
 
 const Title = styled.h2`
-    
+    @media all and (max-width:1280px){
+        font-size: 40px;
+    }
 `
 
 const Description = styled.div`
@@ -98,6 +106,9 @@ const SubTitle = styled.h6`
 
 const RightContainer = styled.div`
     width: 40%;
+    @media all and (max-width:980px){
+        width: 100%;
+    }
 `
 
 const RightUList = styled.ul`

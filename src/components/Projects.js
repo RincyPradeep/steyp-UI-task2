@@ -8,7 +8,6 @@ import ProjectImage3 from '../assets/images/book_landing_page.jpg'
 import ProjectList from './ProjectList'
 
 
-
 function Projects() {
   return (
     <Container>
@@ -40,16 +39,29 @@ const Wrapper = styled.div`
     height: 700px;
     margin:0 auto;
     position: relative;
+    @media all and (max-width:640px){
+        height:100%;
+    }
 `
 
 const Title = styled.h2`
     width: 100px;
     margin-bottom: 100px;
+    @media all and (max-width:1280px){
+        font-size: 40px;
+    }
+    @media all and (max-width:640px){
+        margin-bottom: 30px;
+        width: 100%;
+    }
 `
 
 const UList = styled.ul`
    display: flex;
    justify-content: space-between;
+   @media all and (max-width:640px){
+    flex-direction: column;
+   }
 `
 
 const Image = styled.div`
@@ -60,5 +72,8 @@ const Image = styled.div`
    img{
     width: 100%;
    }
+   @media all and (max-width:640px){
+        display: none;
+    }
 `
 

@@ -61,14 +61,25 @@ const Wrapper = styled.div`
 const Top = styled.div`
     display: flex;
     justify-content: space-between;
+    @media all and (max-width:768px){
+        flex-direction: column;
+    }
 `
 
 const TopLeft = styled.div`
     width: 30%;   
+    @media all and (max-width:768px){
+        width: 100%;
+    }
 `
 
 const Title = styled.h2`
-    
+    @media all and (max-width:1280px){
+        font-size: 40px;
+    }
+    @media all and (max-width:768px){
+        margin-bottom: 20px;
+    }
 `
 
 const TopMiddle = styled.div`
@@ -83,6 +94,10 @@ const TopMiddle = styled.div`
         width: 75%;
         color: #60625d;
     }
+    @media all and (max-width:768px){
+        width: 100%;
+    }
+    
 `
 
 const TopRight = styled.div`
@@ -91,6 +106,13 @@ const TopRight = styled.div`
     img{
         width: 65%;
     }
+    @media all and (max-width:768px){
+        width: 100%;
+        img{
+            width:100px;
+            margin-top: 20px;
+        }
+    }
 `
 
 const Bottom = styled.div`
@@ -98,19 +120,27 @@ const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width:980px){
+        flex-direction: column;
+    }
 `
 
 const BottomLeft = styled.div`
+    width: 30%;
     img{
-        width: 370px;
+        width:100%;
     }
 `
 
 const BottomMiddle = styled.div`
+    width: 30%;
     margin: 0 30px;
     border-top: 2px solid #60625d;
     border-bottom: 2px solid #60625d;
     padding: 50px 0;
+    @media all and (max-width:980px){
+        width: 100%;
+    }
 `
 
 const Content = styled.p`
@@ -121,12 +151,18 @@ const Content = styled.p`
         font-weight: 600;
         color: #000;
     }
+    @media all and (max-width:768px){
+        font-size: 14px;
+    }
 `
 
 const Name = styled.h6`
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 22px;
+    @media all and (max-width:768px){
+        font-size: 18px;
+    }
 `
 
 const Designation = styled.small`
@@ -134,7 +170,8 @@ const Designation = styled.small`
 `
 
 const BottomRight = styled.div`
+    width: 30%;
     img{
-        width: 370px;
+        width: 100%;
     }
 `

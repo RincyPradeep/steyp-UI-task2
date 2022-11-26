@@ -42,5 +42,10 @@ const Right = styled.div`
         font-size: 22px;
         font-weight: 600;
     }
+    @media all and (max-width:640px){
+        p{
+            font-size: 18px;
+        }
+    }
 
 `

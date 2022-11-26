@@ -40,7 +40,7 @@ function Spotlight() {
                 </Top>
                 <Bottom>
                     <Left>
-                        <p>Check Out My</p>
+                        <p className='checkout'>Check Out My</p>
                     </Left>
                     <Right>
                         <UList>
@@ -85,6 +85,9 @@ const Wrapper = styled.div`
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width:768px){
+        flex-direction: column;
+    }
 `
 
 const LeftContainer = styled.div`
@@ -92,6 +95,9 @@ const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    @media all and (max-width:768px){
+        width: 100%;
+    }
 `
 
 const Top = styled.div`
@@ -99,7 +105,9 @@ const Top = styled.div`
 `
 
 const Title = styled.h2`
-    
+    @media all and (max-width:1280px){
+        font-size: 40px;
+    }
 `
 
 const Description = styled.div`
@@ -142,6 +150,9 @@ const Button = styled.button`
     &:last-child{
         margin-right: 0;
     }
+    @media all and (max-width:980px){
+        padding: 15px 10px;
+    }
 `
 
 const BgButton = styled(Button)`
@@ -152,6 +163,14 @@ const BgButton = styled(Button)`
 
 const Left = styled.div`
     margin-right: 20px;
+    @media all and (max-width:1280px){
+        p{
+            &.checkout{
+                margin-right: 10px;
+                font-size: 14px;
+            }
+        }
+    }
 `
 
 const Right = styled.div`
@@ -163,6 +182,18 @@ const Bottom = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
+    @media all and (max-width:980px){
+        flex-direction: column;
+        p{
+            &.checkout{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media all and (max-width:768px){
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 `
 
 const UList = styled.div`
@@ -183,11 +214,21 @@ const List = styled.div`
     &:last-child{
         margin-right: 0;
     } 
+
+    @media all and (max-width:1280px){
+        margin-right: 10px;
+        a{
+            width:65px;
+        }
+    }
 `
 
 const RightContainer = styled.div`
     width: 50%;
     position: relative;
+    @media all and (max-width:768px){
+    margin: auto;
+    }
 `
 
 const Quote = styled.div`
@@ -199,6 +240,24 @@ const Quote = styled.div`
         font-size: 22px;
         line-height: 1.8;
     }
+    @media all and (max-width:1280px){
+        p{
+            font-size: 18px;
+        }
+    }
+    @media all and (max-width:980px){
+        p{
+            font-size: 14px;
+        }
+    }
+    @media all and (max-width:768px){
+        p{
+            font-size: 12px;
+        }
+    }
+    @media all and (max-width:640px){
+        right: -65px;
+    }
 `
 
 const Image = styled.div`
@@ -206,6 +265,7 @@ const Image = styled.div`
     img{
         width: 100%;
     }
+   
 `
 
 const Icon = styled.div`
@@ -215,5 +275,20 @@ const Icon = styled.div`
     left: 36%;
     img{
         width: 100%;
+    }
+
+    @media all and (max-width:1280px){
+        width: 110px;
+        top: 44%;
+        left: 36%;
+    }
+    @media all and (max-width:980px){
+        width: 90px;
+        top: 25%;
+        left: 34%;
+    }
+    @media all and (max-width:768px){
+        width:70px;
+        top:40%;
     }
 `

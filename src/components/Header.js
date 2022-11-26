@@ -2,6 +2,7 @@ import React from 'react'
 
 import {Link,NavLink} from 'react-router-dom';
 import styled from 'styled-components'
+// import Hamburger from './Hamburger';
 
 
 function Header() {    
@@ -38,7 +39,10 @@ function Header() {
                 <UList>
                     <SignIn><Link to='/signin'>Sign in</Link></SignIn>
                     <SignUp><Link to='/signup' className='button'>Sign up</Link></SignUp>
-                </UList>           
+                </UList>      
+                {/* <HamburgerMenu>
+                    <Hamburger />
+                </HamburgerMenu>      */}
             </NavRight>
         </Wrapper>
     </Container>
@@ -61,6 +65,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 `
 
 const NavLeft = styled.div`
@@ -76,14 +81,26 @@ const Heading = styled.h1`
                 width: 100%;
             }
         }
+
+        @media all and (max-width:1280px){
+            a{
+                img{
+                    width: 80%;
+                }
+            }
+        }
 `
 
 const NavMiddle=styled.div`
-  
+    @media all and (max-width:980px){
+        display: none;
+    }
 `
 
 const NavRight=styled.div`
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const UList = styled.ul`
@@ -92,7 +109,7 @@ const UList = styled.ul`
 `
 
 const List = styled.li`
-    margin-right: 30px;
+    margin-right: 20px;
     padding-bottom: 5px;
     &:last-child{
         margin-right: 0;
@@ -103,10 +120,19 @@ const List = styled.li`
         border-bottom: 2px solid #000;
       } 
     }
+    
+    @media all and (max-width:1280px){
+        font-size: 16px;
+        a{
+            &.active{
+                font-size: 18px;
+            }
+        }
+    }
 `
 
-const SignIn = styled.li`
-    margin-right: 30px;
+const SignIn = styled(List)`
+    
 `
 
 const SignUp = styled(List)`
@@ -115,3 +141,10 @@ const SignUp = styled(List)`
     border-radius: 5px;
 `
 
+// const HamburgerMenu = styled.div`
+//     margin-left: 20px;
+//     display: none;
+//     @media all and (max-width:980px){
+//         display: block;
+//     }
+// `

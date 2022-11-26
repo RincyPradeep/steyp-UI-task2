@@ -26,4 +26,18 @@ const LeftList = styled.li`
     &:nth-child(3n){
         margin-right: 0;
     }
+    @media all and (max-width:1280px){
+      margin-right: 20px;
+      width: 100px;
+      img{
+        width: 70px;
+      }
+    }
+    @media all and (max-width:768px){
+      width: 140px;
+    }
+    @media all and (max-width:640px){
+      width: 130px;
+      text-align: center;
+    }
 `

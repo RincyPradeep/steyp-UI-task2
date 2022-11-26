@@ -46,7 +46,7 @@ function Contact() {
               <Label htmlFor="phone">Phone number*</Label>
               <InputContainer>
                 <img src={require("../assets/images/flag.svg").default} alt="flag" />               
-                <img src={require("../assets/images/down_arrow2.png")} alt="arrow" className='arrow'/>
+                <img src={Arrow} alt="arrow" className='arrow'/>
                 <span>+91 </span>
                 <Input type="text" placeholder="Enter your phone number" name="phone" id="phone"></Input>
               </InputContainer>              

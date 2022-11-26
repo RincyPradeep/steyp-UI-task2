@@ -33,7 +33,6 @@ export default PageTop
 const Top = styled.div`
     background-color: #FCDA69;
     padding: 80px 0;
-
 `
 
 const Content = styled.div`

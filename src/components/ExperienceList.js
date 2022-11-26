@@ -32,7 +32,10 @@ const ColumnLeft = styled.div`
     p{
         font-family: intersemibold;
     }
-
+    @media all and (max-width:1280px){
+        width: 50%;
+        margin-right: 20px;
+    }
 `
 
 const ColumnRight = styled.div`
