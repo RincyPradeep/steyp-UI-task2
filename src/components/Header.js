@@ -1,13 +1,29 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 import {Link,NavLink} from 'react-router-dom';
 import styled from 'styled-components'
-// import Hamburger from './Hamburger';
+import Hamburger from './Hamburger';
 
 
 function Header() {    
+
+    const [open,setOpen] = useState(false)
+    const [showBg, setShowBg] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                setShowBg(true);
+            } else setShowBg(false);
+        });
+
+        return () => {
+            window.removeEventListener("scroll",null);
+        }
+    }, [])
+
   return (
-    <Container>
+    <Container className={showBg && "nav-bg"}>
         <Wrapper>
             <NavLeft>
                 <Heading>
@@ -16,8 +32,9 @@ function Header() {
                     </Link>
                 </Heading>
             </NavLeft>
-            <NavMiddle>
-                <UList>
+
+            <NavRight className={open ? 'mobile-menu-link' : 'menu-link'}>
+                <UList onClick={()=>setOpen(false)}>
                     <List >
                         <NavLink to='/' className={({isActive})=>isActive ? 'active' : undefined}>Home</NavLink>
                     </List>
@@ -33,17 +50,15 @@ function Header() {
                     <List >
                         <NavLink to='/Contact' className={({isActive})=>isActive ? 'active' : undefined}>Contact</NavLink>
                     </List>
-                </UList>
-            </NavMiddle>
-            <NavRight>
-                <UList>
-                    <SignIn><Link to='/signin'>Sign in</Link></SignIn>
-                    <SignUp><Link to='/signup' className='button'>Sign up</Link></SignUp>
-                </UList>      
-                {/* <HamburgerMenu>
-                    <Hamburger />
-                </HamburgerMenu>      */}
+                            
+                    <List className='signin-btn'><Link to='/signin'>Sign in</Link></List>
+                    <List className='signup-btn'><Link to='/signup'>Sign up</Link></List>
+                </UList>        
             </NavRight>
+
+            <HamburgerMenu>
+                <Hamburger open={open} setOpen={setOpen} />
+            </HamburgerMenu>   
         </Wrapper>
     </Container>
   )
@@ -57,6 +72,13 @@ const Container = styled.div`
     font-weight:600;
     font-size: 18px;
     display: flex;
+    position: fixed;
+    width: 100%;
+    z-index:99;
+    background-color: #fff;
+    &.nav-bg{
+        background-color: #f6f8f4;
+    }
 `
 
 const Wrapper = styled.div`
@@ -91,21 +113,37 @@ const Heading = styled.h1`
         }
 `
 
-const NavMiddle=styled.div`
-    @media all and (max-width:980px){
-        display: none;
-    }
-`
-
 const NavRight=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media all and (max-width:980px){
+        &.menu-link{
+            display: none;
+        }
+        &.mobile-menu-link{
+            position: fixed;
+            right: 0;
+            top: 90px;
+            background-color:#e7e7e7;
+            width: 250px;
+            z-index: 99;
+            display: block;
+            padding: 20px;
+            box-shadow: 0px 4px 31px rgba(0,0,0,0.15);                       
+        }       
+    }
 `
 
 const UList = styled.ul`
     display: flex;
     align-items: center;
+
+    @media all and (max-width:980px){
+        flex-direction: column;
+        
+    }
 `
 
 const List = styled.li`
@@ -113,6 +151,14 @@ const List = styled.li`
     padding-bottom: 5px;
     &:last-child{
         margin-right: 0;
+    }
+    &.signin-btn{
+        margin-left:120px;
+    }
+    &.signup-btn{
+        border: 1px solid black;
+        padding: 10px 30px;
+        border-radius: 5px;
     }
     a{
        &.active {
@@ -129,22 +175,30 @@ const List = styled.li`
             }
         }
     }
+    @media all and (max-width:980px){
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &.signin-btn{
+            margin-left: 0;
+        }
+        &.signup-btn{
+            border: none;
+            padding: 0;
+        }
+    }
 `
 
-const SignIn = styled(List)`
-    
-`
 
-const SignUp = styled(List)`
-    border: 1px solid black;
-    padding: 10px 30px;
-    border-radius: 5px;
-`
+const HamburgerMenu = styled.div`
+    display: none;
 
-// const HamburgerMenu = styled.div`
-//     margin-left: 20px;
-//     display: none;
-//     @media all and (max-width:980px){
-//         display: block;
-//     }
-// `
+    @media all and (max-width:980px){
+        display: block;
+        position: absolute;
+        right: 5%;
+    }
+`

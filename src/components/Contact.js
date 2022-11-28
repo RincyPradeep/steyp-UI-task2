@@ -2,16 +2,14 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import ContactPartOne from './ContactPartOne'
-import ContactPartTwo from './ContactPartTwo'
+import ContactParts from './ContactParts'
 
 
 function Contact() {
   return (
     <Container>
         <Wrapper>
-            <ContactPartOne />
-            <ContactPartTwo />
+            <ContactParts />
         </Wrapper>
         <hr/>
     </Container>
@@ -30,7 +28,12 @@ const Container = styled.div`
         margin-top: 50px;
         border-top: 1px solid #000;
     }
+
+    @media all and (max-width:480px){
+        padding: 50px 0;
+    }
 `
+
 
 const Wrapper = styled.div`
     width: 90%;
@@ -38,6 +41,8 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    
     @media all and (max-width:980px){
         flex-direction: column;
     }

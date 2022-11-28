@@ -1,24 +1,25 @@
-// import React,{useState} from 'react'
+import React from 'react'
 
-// import styled from 'styled-components'
-
-
-// function Hamburger() {
-
-//     const [open,setOpen] = useState(false)
-
-//   return (
-//     <Container open={open} onClick={()=>setOpen(!open)}>
-//         <img src={require("../assets/images/vector.svg").default} alt="menu" />
-//     </Container>
-//   )
-// }
-
-// export default Hamburger
+import styled from 'styled-components'
 
 
-// const Container = styled.div`
-//     img{
-//         width: 30px;
-//     }
-// `
+function Hamburger({open,setOpen}) {
+  return (
+    <Container onClick={()=>setOpen(!open)}>
+        {
+            open ?
+            <img src={require("../assets/images/close.png")} alt="menu" /> :
+            <img src={require("../assets/images/vector.svg").default} alt="menu" />
+        }
+    </Container>
+  )
+}
+
+export default Hamburger
+
+
+const Container = styled.div`
+    img{
+        width: 30px;
+    }
+`

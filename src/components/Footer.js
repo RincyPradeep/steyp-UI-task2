@@ -42,7 +42,7 @@ function Footer() {
                         <Email>getinfocasa7@gmail.com</Email>
                         <Phone>
                             <img src={require("../assets/images/call_icon.svg").default} alt="call" />
-                            <span>+(088 1254 889</span>
+                            <span>+(088 1254 889 760)</span>
                         </Phone>
                         <SocialMedia>
                             <img src={require("../assets/images/facebook.svg").default} alt="facebook" />
@@ -78,15 +78,18 @@ const Container = styled.div`
     background-color: #f6f8f4;
 `
 
+
 const Wrapper = styled.div`
     width: 90%;
     margin:0 auto;
+
     @media all and (max-width:640px){
         li{
             font-size:14px;
         }
     }
 `
+
 
 const Top = styled.div`
     display: flex;
@@ -99,11 +102,13 @@ const ColumnOne = styled.div`
    img{
     width: 100px;
    }
+
    @media all and (max-width:980px){
     width: 100%;
     margin-bottom: 30px;
    }
 `
+
 
 const Description = styled.p`
     color: #60625d;
@@ -111,63 +116,87 @@ const Description = styled.p`
     margin-top:10px;
 `
 
+
 const ColumnTwo = styled.div`
    width: 20%;
+
    @media all and (max-width:980px){
     width: 30%;
    }
    @media all and (max-width:640px){
         width: 25%;
     }
+    @media all and (max-width:480px){
+        width: 50%;
+    }
 `
+
 
 const Title = styled.p`
    font-family: interbold;
    font-size: 22px;
    margin-bottom: 20px;
+
    @media all and (max-width:640px){
         font-size:18px;
     }
 `
 
+
 const UList = styled.ul`
 
 `
+
 
 const List = styled.li`
    margin-top: 10px;
 `
 
+
 const ColumnThree = styled.div`
     width: 20%;
+
     @media all and (max-width:980px){
         width: 30%;
     }
     @media all and (max-width:640px){
         width: 25%;
     }
+    @media all and (max-width:480px){
+        width: 50%
+    }
 `
+
 
 const ColumnFour = styled.div`
     width: 20%;
+
     @media all and (max-width:980px){
         width: 30%;
     }
     @media all and (max-width:640px){
         width: 40%;
     }
+    @media all and (max-width:480px){
+        width: 100%;
+        margin-top: 20px;
+    }
 `
+
 
 const Contact = styled.div`
     
 `
 
+
 const Email = styled.p`
     margin-top: 15px;
+
     @media all and (max-width:640px){
         font-size: 14px;
     }
 `
+
 
 const Phone = styled.div`
     margin-top: 15px;
@@ -176,10 +205,12 @@ const Phone = styled.div`
     img{
         margin-right: 10px;
     }
+
     @media all and (max-width:640px){
         font-size: 14px;
     }
 `
+
 
 const SocialMedia = styled.div`
     margin-top: 15px;
@@ -189,12 +220,14 @@ const SocialMedia = styled.div`
         width:25px;
         margin-right: 30px;
     }
+
     @media all and (max-width:640px){
         img{
             width: 18px;
         }
     }
 `
+
 
 const Bottom = styled.div`
     display: flex;
@@ -204,18 +237,31 @@ const Bottom = styled.div`
     margin-top: 50px;
     font-family: intersemibold;
     border-top: 1px solid #c3c5c1;
+
+    @media all and (max-width:480px){
+        font-size: 12px;
+        flex-direction: column;
+    }
 `
 
+
 const Left = styled.div`
-   
+    @media all and (max-width:480px){
+          margin-bottom : 10px;  
+    }
 `
+
 
 const Right = styled.div`
    
 `
 
+
 const Items = styled.div`
    a{
     margin-right: 20px;
+    &:last-child{
+        margin-right: 0;
+    }
    }
 `

@@ -23,13 +23,15 @@ function Experience() {
           </Middle>
           <Bottom>
             <SubTitle>Experience</SubTitle>
+            <UList>
               {
                 experience_data.map(data=>{
                   return(
                     <ExperienceList year={data.year} designation={data.designation} company={data.company} description={data.description} key={data.id} />
                   )
                 })
-              }              
+              }    
+            </UList>          
           </Bottom>
         </Wrapper>
     </Container>
@@ -41,14 +43,15 @@ export default Experience
 
 const Container = styled.div`
     padding: 0 0 100px;
+    @media all and (max-width:640px){
+        padding: 0 0 50px;
+    }
 `
 
 const Wrapper = styled.div`
     width:90%;
     margin:0 auto;
 `
-
-
 
 const Middle = styled.div`
   padding-top: 80px;
@@ -65,5 +68,9 @@ const MiddleSub = styled.div`
 `
 
 const Bottom = styled.div`
+
+`
+
+const UList = styled.ul`
 
 `

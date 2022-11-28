@@ -3,10 +3,9 @@ import PageTop from '../components/PageTop'
 
 import styled from 'styled-components'
 
-import ContactPartTwo from '../components/ContactPartTwo'
-import ContactPartOne from '../components/ContactPartOne'
 import SlantingText from '../components/SlantingText'
 import Arrow from '../assets/images/down_arrow2.png'
+import ContactParts from '../components/ContactParts'
 
 
 function Contact() {
@@ -96,8 +95,7 @@ function Contact() {
       </FormContainer>
 
       <Content>
-        <ContactPartTwo />
-        <ContactPartOne />
+        <ContactParts />
       </Content>
     </Container>
   )
@@ -117,6 +115,9 @@ const FormContainer = styled.div`
 const Form = styled.form`
   width: 70%;
   margin: 0 auto;
+  @media all and (max-width:980px){
+    width: 90%;
+  }
 `
 
 const HeadContainer = styled.div`
@@ -135,13 +136,18 @@ const Text = styled.div`
 `
 
 const Title = styled.h3`
-  
+  @media all and (max-width:480px){
+      font-size: 28px;
+  }
 `
 
 const Top = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media all and (max-width:768px){
+    flex-direction: column;
+  }
 `
 
 const Section = styled.div`
@@ -149,6 +155,9 @@ const Section = styled.div`
   flex-direction: column;
   width: 46%;
   margin-bottom: 50px;
+  @media all and (max-width:768px){
+    width: 100%;
+  }
 `
 
 const TextAreaSection = styled(Section)`
@@ -262,5 +271,11 @@ const Content = styled.div`
     margin: 0 auto;
     border-radius: 50px;
     padding: 50px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    
+    @media all and (max-width:480px){
+      padding: 20px 15px;
+    }
 `
 

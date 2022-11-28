@@ -77,54 +77,72 @@ export default Spotlight
 
 
 const Container = styled.div`
-    padding: 50px 0;
+    padding: 140px 0 50px;
 `
+
 
 const Wrapper = styled.div`
     width:90%;
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+
     @media all and (max-width:768px){
         flex-direction: column;
     }
 `
+
 
 const LeftContainer = styled.div`
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: space-between;
+
     @media all and (max-width:768px){
         width: 100%;
     }
 `
 
+
 const Top = styled.div`
     
 `
+
 
 const Title = styled.h2`
     @media all and (max-width:1280px){
         font-size: 40px;
     }
+    @media all and (max-width:480px){
+        font-size: 30px;
+    }
 `
+
 
 const Description = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
     color: #60625d;
+
+    @media all and (max-width:480px){
+        font-size: 14px;
+        line-height: 1.6;
+    }
 `
+
 
 const DescriptionLeft = styled.div`
     margin-right: 30px;
     margin-top: -10px;
 `
 
+
 const DescriptionRight = styled.div`
    
 `
+
 
 const ButtonContainer = styled.div`
     display: flex;
@@ -136,6 +154,8 @@ const ButtonContainer = styled.div`
         width: 20px;
     }
 `
+
+
 const Button = styled.button`
     display: flex;
     justify-content: space-between;
@@ -150,10 +170,15 @@ const Button = styled.button`
     &:last-child{
         margin-right: 0;
     }
+
     @media all and (max-width:980px){
         padding: 15px 10px;
     }
+    @media all and (max-width:480px){
+        padding: 8px 10px;
+    }
 `
+
 
 const BgButton = styled(Button)`
     background-color: #8873EF;
@@ -161,8 +186,10 @@ const BgButton = styled(Button)`
     cursor: pointer;
 `
 
+
 const Left = styled.div`
     margin-right: 20px;
+
     @media all and (max-width:1280px){
         p{
             &.checkout{
@@ -182,6 +209,7 @@ const Bottom = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
+
     @media all and (max-width:980px){
         flex-direction: column;
         p{
@@ -196,11 +224,13 @@ const Bottom = styled.div`
     }
 `
 
+
 const UList = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
 `
+
 
 const List = styled.div`
     margin-right: 30px;
@@ -223,13 +253,16 @@ const List = styled.div`
     }
 `
 
+
 const RightContainer = styled.div`
     width: 50%;
     position: relative;
+
     @media all and (max-width:768px){
     margin: auto;
     }
 `
+
 
 const Quote = styled.div`
     position: absolute;
@@ -240,6 +273,7 @@ const Quote = styled.div`
         font-size: 22px;
         line-height: 1.8;
     }
+
     @media all and (max-width:1280px){
         p{
             font-size: 18px;
@@ -258,7 +292,13 @@ const Quote = styled.div`
     @media all and (max-width:640px){
         right: -65px;
     }
+    @media all and (max-width:480px){
+        p{
+            font-size: 10px;
+        }
+    }
 `
+
 
 const Image = styled.div`
     width: 100%;
@@ -267,6 +307,7 @@ const Image = styled.div`
     }
    
 `
+
 
 const Icon = styled.div`
     width: 150px;
@@ -290,5 +331,8 @@ const Icon = styled.div`
     @media all and (max-width:768px){
         width:70px;
         top:40%;
+    }
+    @media all and (max-width:480px){
+        width: 40px;
     }
 `

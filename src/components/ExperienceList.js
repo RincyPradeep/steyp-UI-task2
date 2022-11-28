@@ -24,7 +24,12 @@ const RightList = styled.li`
     display: flex;
     border-top: 1px solid #c3c5c1;
     padding: 30px 0;
+
+    @media all and (max-width:640px){
+        flex-direction: column;
+    }
 `
+
 
 const ColumnLeft = styled.div`
     width:25%;
@@ -32,9 +37,13 @@ const ColumnLeft = styled.div`
     p{
         font-family: intersemibold;
     }
+
     @media all and (max-width:1280px){
         width: 50%;
         margin-right: 20px;
+    }
+    @media all and (max-width:640px){
+        width: 100%;
     }
 `
 
@@ -49,5 +58,8 @@ const ColumnRight = styled.div`
         display: block;
         margin-top: 20px;
     }
-
+    
+    @media all and (max-width:640px){
+        width: 100%;
+    }
 `

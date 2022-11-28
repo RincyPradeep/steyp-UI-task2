@@ -29,6 +29,7 @@ const List = styled.li`
     border-top: 1px solid black;
 `
 
+
 const ListContainer = styled.div`
     width: 100%;
     display: flex;
@@ -37,9 +38,11 @@ const ListContainer = styled.div`
     font-family: intersemibold;
 `
 
+
 const ListLeft = styled.div`
 
 `
+
 
 const ListMiddle = styled.div`
     width:33%;
@@ -47,6 +50,7 @@ const ListMiddle = styled.div`
         line-height: 1.8;
         margin-bottom: 20px;
     }
+
     @media all and (max-width:1280px){
         width: 50%;
         h6{
@@ -58,8 +62,17 @@ const ListMiddle = styled.div`
             font-size: 20px;
         }
     }
+    @media all and (max-width:480px){
+        h6{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
 
 `
+
 
 const ListRight = styled.div`
     display: flex;

@@ -32,8 +32,13 @@ export default PageTop
 
 const Top = styled.div`
     background-color: #FCDA69;
-    padding: 80px 0;
+    padding: 170px 0 80px;
+
+    @media all and (max-width:480px){
+        padding: 140px 0 50px;
+    }
 `
+
 
 const Content = styled.div`
     display: flex;
@@ -42,12 +47,26 @@ const Content = styled.div`
     margin:0 auto;
 `
 
+
 const TopLeft = styled.div`
     width: 40%;
+
+    @media all and (max-width:768px){
+        width: 60%;
+    }
+    @media all and (max-width:480px){
+        width: 100%;
+    }
 `
 
+
 const Title = styled.h2`
-    width: 500px;
+    @media all and (max-width:768px){
+        font-size: 55px;
+    }
+    @media all and (max-width:480px){
+        font-size: 38px;
+    }
 `
 
 const Description = styled.div`
@@ -57,18 +76,30 @@ const Description = styled.div`
     color: #60625d;
 `
 
+
 const TopRight = styled.div`
     width: 200px;
     padding-left: auto;
     img{
       width:100%;
     }
+    @media all and (max-width:768px){
+        width: 150px;
+    }
+    @media all and (max-width:640px){
+        width: 50px;
+    }
+    @media all and (max-width:480px){
+        display: none;
+    }
 `
+
 
 const Left = styled.div`
     margin-right: 30px;
     margin-top: -10px;
 `
+
 
 const Right = styled.div`
    

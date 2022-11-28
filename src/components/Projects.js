@@ -32,6 +32,10 @@ export default Projects
 const Container = styled.div`
     padding: 100px 0;
     background-color: #FCDA69;
+
+    @media all and (max-width:480px){
+        padding: 50px 0;
+    }
 `
 
 const Wrapper = styled.div`
@@ -39,6 +43,7 @@ const Wrapper = styled.div`
     height: 700px;
     margin:0 auto;
     position: relative;
+
     @media all and (max-width:640px){
         height:100%;
     }
@@ -47,6 +52,7 @@ const Wrapper = styled.div`
 const Title = styled.h2`
     width: 100px;
     margin-bottom: 100px;
+
     @media all and (max-width:1280px){
         font-size: 40px;
     }
@@ -54,11 +60,15 @@ const Title = styled.h2`
         margin-bottom: 30px;
         width: 100%;
     }
+    @media all and (max-width:480px){
+        font-size: 30px;
+    }
 `
 
 const UList = styled.ul`
    display: flex;
    justify-content: space-between;
+
    @media all and (max-width:640px){
     flex-direction: column;
    }
@@ -72,6 +82,7 @@ const Image = styled.div`
    img{
     width: 100%;
    }
+   
    @media all and (max-width:640px){
         display: none;
     }

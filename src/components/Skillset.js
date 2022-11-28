@@ -30,6 +30,6 @@ export default Skillset
 const LeftUList = styled.ul`
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: center;
    width: 100%;
 `

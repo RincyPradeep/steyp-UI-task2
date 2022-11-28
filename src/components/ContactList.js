@@ -26,9 +26,20 @@ const Contact = styled.div`
     align-items: center;
 `
 
+
 const Left = styled.div`
     margin-right: 30px;
+    img{
+        width: 100px;
+    }
+
+    @media all and (max-width:480px){
+        img{
+            width: 60px;
+        }
+    }
 `
+
 
 const Right = styled.div`
     small{
@@ -42,10 +53,15 @@ const Right = styled.div`
         font-size: 22px;
         font-weight: 600;
     }
+    
     @media all and (max-width:640px){
         p{
             font-size: 18px;
         }
     }
-
+    @media all and (max-width:480px){
+        p{
+            font-size: 14px;
+        }
+    }
 `

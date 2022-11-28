@@ -15,7 +15,7 @@ export default ServicePage
 
 
 const Container = styled.div`
-  height: 45vh;
+  height: 57vh;
   display: flex;
   justify-content: center;
   align-items: center;

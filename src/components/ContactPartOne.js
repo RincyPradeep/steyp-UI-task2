@@ -24,15 +24,22 @@ export default ContactPartOne
 
 const LeftContainer = styled.div`
     width: 40%;
+
     @media all and (max-width:980px){
       width: 100%;
+      margin-bottom: 30px;
     }
 `
+
 
 const Title = styled.h2`
     line-height: 1.6;
     margin-bottom: 30px;
+    
     @media all and (max-width:1280px){
       font-size: 40px;
+    }
+    @media all and (max-width:480px){
+        font-size: 30px;
     }
 `
