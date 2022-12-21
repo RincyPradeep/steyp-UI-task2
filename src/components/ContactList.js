@@ -10,7 +10,10 @@ function ContactList({img, text, address}) {
             <img src={img} alt="icon" />
         </Left>
         <Right>
-            <small>{text}</small>
+            {text === "Email" ? 
+                <a href="mailto:casa@example.com"><small>{text}</small></a>             
+                : <small>{text}</small>
+            }
             <p>{address}</p>
         </Right>
     </Contact>

@@ -47,7 +47,7 @@ function Contact() {
                 <img src={require("../assets/images/flag.svg").default} alt="flag" />               
                 <img src={Arrow} alt="arrow" className='arrow'/>
                 <span>+91 </span>
-                <Input type="text" placeholder="Enter your phone number" name="phone" id="phone"></Input>
+                <Input type="tel" placeholder="Enter your phone number" name="phone" id="phone"></Input>
               </InputContainer>              
             </Section>
 
